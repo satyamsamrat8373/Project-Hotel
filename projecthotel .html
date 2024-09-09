@@ -1,0 +1,60 @@
+<Body bgcolor=grey>
+<form name=m>
+<table border=2 bgcolor=pink>
+<TR>
+    <TH> Hotel Id </TH>
+    <TH> <input type=text name=t1 style="Background-color:olive"></TH>
+</TR>
+<TR>
+    <TH> Name </TH>
+    <TH> <input type=text name=t2 style="Background-color:orange"></TH>
+</TR>
+<TR>
+    <TH> Room Charge </TH>
+    <TH> <input type=text name=t3 style="Background-color:lime"></TH>
+</TR>
+<TR>
+     <TH> Facilities </TH>
+     <TH> <input type=checkbox name=c1 onclick=a()>AC<BR>
+          <input type=checkbox name=c2 onclick=a()>Internet <BR>
+          <input type=checkbox name=c3 onclick=a()>Others </TH>
+</TR>
+<TR>
+     <TH> Discount </TH>
+     <TH> <input type=radio name=r1 onclick=a()>Special Customer 
+          <input type=radio name=r1 onclick=a()>General Customer </TH>
+</TR>
+</Body>
+</form>
+</table>
+
+<script>
+                 function a()
+               { 
+                  n=parseInt(m.t3.value)
+                  k=n
+                  if(m.c1.checked==true)
+                  k=k+100
+                  if(m.c2.checked==true)
+                   k=k+200
+                  if(m.c3.checked==true)
+                   k=k+100
+     
+                if(m.r1[0].checked==true)
+                   s=k-k*10/100
+                else if(m.r1[1].checked==true)
+                  s=k-k*5/100
+               alert("Total charges="+s)
+               }
+
+                 </script>
+
+
+
+
+
+
+
+
+
+                  
